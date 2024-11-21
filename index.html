@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My File Repository</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My File Repository</h1>
+            <div class="upload-section">
+                <label for="file-upload" class="upload-btn">
+                    <i class="fas fa-upload"></i> Upload Files
+                </label>
+                <input type="file" id="file-upload" multiple>
+            </div>
+        </header>
+
+        <nav class="category-nav">
+            <button class="category-btn active" data-category="all">
+                <i class="fas fa-folder"></i> All Files
+            </button>
+            <button class="category-btn" data-category="images">
+                <i class="fas fa-image"></i> Images
+            </button>
+            <button class="category-btn" data-category="music">
+                <i class="fas fa-music"></i> Music
+            </button>
+            <button class="category-btn" data-category="videos">
+                <i class="fas fa-video"></i> Videos
+            </button>
+            <button class="category-btn" data-category="documents">
+                <i class="fas fa-file-alt"></i> Documents
+            </button>
+        </nav>
+
+        <main>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search files...">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="files-grid" id="files-container">
+                <!-- Files will be dynamically added here -->
+            </div>
+        </main>
+
+        <!-- Preview Modal -->
+        <div class="modal" id="preview-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="preview-container">
+                    <!-- Preview content will be added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
